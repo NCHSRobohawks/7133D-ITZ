@@ -6,6 +6,10 @@ Before opening any files, make sure you have installed PROS Editor successfully.
 
 When committing, make sure to write a description on what you changed to keep things organized.
 
+Files for Source Code:
+
 opcontrol.c - Contains the code that allows the robot to be directly controlled by a user.
+
 auto.c - Contains the autonomous code.
+
 init.c - Initializes the sensors and motors, etc.
