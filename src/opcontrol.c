@@ -31,11 +31,13 @@
  */
 void operatorControl() {
 	//basic setup where the right joystick controls turning and accelerating (forward/backward)
-	int power;
+  int power;
   int turn;
     while (1) {
         power = joystickGetAnalog(1, 2); // vertical axis on right joystick
         turn  = joystickGetAnalog(1, 1); // horizontal axis on right joystick
+	if(power < 0) power = 0; //temporary solution to non-omni wheels
+	if(turn < 0) turn = 0;
         motorSet(2, power + turn); // set left wheels
         motorSet(3, power - turn); // set right wheels
         delay(20);
