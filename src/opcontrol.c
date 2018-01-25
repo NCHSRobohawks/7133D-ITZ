@@ -36,6 +36,11 @@ void operatorControl() {
     while (1) {
         power = joystickGetAnalog(1, 2); // vertical axis on right joystick
         turn  = joystickGetAnalog(1, 1); // horizontal axis on right joystick
+	
+		if(digitalRead(7) == LOW){
+			//mobile goal lift
+		}
+	    
         motorSet(2, power + turn); // set left wheels
         motorSet(3, power - turn); // set right wheels
         delay(20);
